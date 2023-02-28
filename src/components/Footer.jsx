@@ -6,7 +6,7 @@ function NavLink({ href, children }) {
   return (
     <Link
       href={href}
-      className="transition hover:text-teal-500 dark:hover:text-teal-400"
+      className="transition hover:text-purple-600 dark:hover:text-purple-300"
     >
       {children}
     </Link>
@@ -31,7 +31,7 @@ export function Footer() {
                 Website design with &hearts; by{' '}
                 <a
                   href="https://kreativedreamflow.com"
-                  className="transition hover:text-purple-600 dark:hover:text-purple-600"
+                  className="transition hover:text-purple-600 dark:hover:text-purple-300"
                 >
                   Kreative Dreamflow
                 </a>
