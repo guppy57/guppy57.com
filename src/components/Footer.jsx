@@ -23,12 +23,19 @@ export function Footer() {
               <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/about">About</NavLink>
                 <NavLink href="/projects">Projects</NavLink>
-                <NavLink href="/speaking">Speaking</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
+                <NavLink href="/contact">Contact</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Spencer Sharp. All rights
-                reserved.
+              &copy; {new Date().getFullYear()} Armaan Gupta. All rights
+                reserved. | {" "}
+                Website design with &hearts; by{' '}
+                <a
+                  href="https://kreativedreamflow.com"
+                  className="transition hover:text-purple-600 dark:hover:text-purple-600"
+                >
+                  Kreative Dreamflow
+                </a>
               </p>
             </div>
           </Container.Inner>
