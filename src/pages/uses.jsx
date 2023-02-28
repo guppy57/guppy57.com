@@ -29,87 +29,88 @@ export default function Uses() {
   return (
     <>
       <Head>
-        <title>Uses - Spencer Sharp</title>
+        <title>Uses - Armaan Gupta</title>
         <meta
           name="description"
-          content="Software I use, gadgets I love, and other things I recommend."
+          content="Tools I use to build software, design products, and have fun."
         />
       </Head>
       <SimpleLayout
-        title="Software I use, gadgets I love, and other things I recommend."
-        intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+        label="What I use"
+        title="Tools I use to build software, design products, and have fun."
+        intro="I don't think anyone besides my fellow developer friends care about what tools I use, but I'm going to share them anyways. I hope you find something new and useful here!"
       >
         <div className="space-y-20">
           <ToolsSection title="Workstation">
-            <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-              I was using an Intel-based 16” MacBook Pro prior to this and the
-              difference is night and day. I’ve never heard the fans turn on a
-              single time, even under the incredibly heavy loads I put it
-              through with our various launch simulations.
+            <Tool title="16” MacBook Pro, Intel 16GB RAM (2019)">
+              I've been blessed to have such a supporting Grandmother who helped
+              me purchase my favorite laptop ever when I started at Iowa State
+              University. My MacBook is probably more important to me than my
+              phone or the Mazda.
             </Tool>
-            <Tool title="Apple Pro Display XDR (Standard Glass)">
-              The only display on the market if you want something HiDPI and
-              bigger than 27”. When you’re working at planetary scale, every
-              pixel you can get counts.
+            <Tool title="Keychron K2 for Mac">
+              When you spend hours on end on the keyboard, it&apos;s important
+              to have one that makes you smile. My Keychron K2 literally lets me
+              glide across the board.
             </Tool>
-            <Tool title="IBM Model M SSK Industrial Keyboard">
-              They don’t make keyboards the way they used to. I buy these any
-              time I see them go up for sale and keep them in storage in case I
-              need parts or need to retire my main.
-            </Tool>
-            <Tool title="Apple Magic Trackpad">
-              Something about all the gestures makes me feel like a wizard with
-              special powers. I really like feeling like a wizard with special
-              powers.
-            </Tool>
-            <Tool title="Herman Miller Aeron Chair">
-              If I’m going to slouch in the worst ergonomic position imaginable
-              all day, I might as well do it in an expensive chair.
+            <Tool title="Logitech G604">
+              I&apos;m a big fan of the Logitech G604. It&apos;s a wireless
+              mouse that has a six programmable micros, and believe me, I've set
+              them up. Without having to move my mouse I can access my tasks,
+              calendar, and Spotify.
             </Tool>
           </ToolsSection>
           <ToolsSection title="Development tools">
-            <Tool title="Sublime Text 4">
-              I don’t care if it’s missing all of the fancy IDE features
-              everyone else relies on, Sublime Text is still the best text
-              editor ever made.
+            <Tool title="Visual Studio Code">
+              Originally, I refused to use VS Code because I was a die-hard
+              Webstorm fan and couldn't stand how much RAM VSCode was used
+              (because it is an Electron app after all). But after working at
+              John Deere and having to use it, I fell in love.
             </Tool>
-            <Tool title="iTerm2">
-              I’m honestly not even sure what features I get with this that
-              aren’t just part of the macOS Terminal but it’s what I use.
+            <Tool title="Postman">
+              By far one of my most favorite tools, Postman is a must-have for
+              any web developer. I use it to test all my APIs, create basic
+              documentation, and share my tests with other team members. Once
+              you have Postman setup, you will fly when building any API.
             </Tool>
-            <Tool title="TablePlus">
-              Great software for working with databases. Has saved me from
-              building about a thousand admin interfaces for my various projects
-              over the years.
+            <Tool title="DataGrip">
+              Thank God for the JetBrains Student License, I love using DataGrip
+              to manage and view my databases. It&apos;s a bit chunky, but I
+              feel powerful when I use it.
+            </Tool>
+            <Tool title="XCode">
+              This one&apos;s not by choice. I love Apple, but they sure do know
+              how to lock you in. I'm forced to use XCode to develop mac apps,
+              but that&apos;s about it.
             </Tool>
           </ToolsSection>
           <ToolsSection title="Design">
             <Tool title="Figma">
-              We started using Figma as just a design tool but now it’s become
-              our virtual whiteboard for the entire company. Never would have
-              expected the collaboration features to be the real hook.
+              When I started my journey into technology, I had a Windows
+              machine. I wanted Sketch, but literally couldn&apos;t download it.
+              So I started using Figma. Even now that I have a MacBook and tried
+              Sketch, Figma has my heart.
             </Tool>
           </ToolsSection>
           <ToolsSection title="Productivity">
-            <Tool title="Alfred">
-              It’s not the newest kid on the block but it’s still the fastest.
-              The Sublime Text of the application launcher world.
+            <Tool title="Raycast">
+              Say goodbye to Spotlight. Raycast has been a game-changer for me.
+              I use my applications launcher on my mac almost every couple
+              minutes, and Raycast does that so well, and even provides other
+              tools. I can use a calculator, open Google Drive files, start a
+              timer, and even add tasks to my issue tracker in a single
+              keystroke.
             </Tool>
-            <Tool title="Reflect">
-              Using a daily notes system instead of trying to keep things
-              organized by topics has been super powerful for me. And with
-              Reflect, it’s still easy for me to keep all of that stuff
-              discoverable by topic even though all of my writing happens in the
-              daily note.
+            <Tool title="Things 3">
+              I have been using Things 3 since I purchased my MacBook, it was
+              the first app and task manager I paid for. It is completely worth
+              the $50. Period.
             </Tool>
-            <Tool title="SavvyCal">
-              Great tool for scheduling meetings while protecting my calendar
-              and making sure I still have lots of time for deep work during the
-              week.
-            </Tool>
-            <Tool title="Focus">
-              Simple tool for blocking distracting websites when I need to just
-              do the work and get some momentum going.
+            <Tool title="Linear">
+              My business runs on Linear. I use it to manage my projects, tasks,
+              roadmaps, and deadlines. This has been the one application that
+              has transformed my workflow and productivity in a huge way. Linear
+              promotes focusing on what&apos;s important and moving fast.
             </Tool>
           </ToolsSection>
         </div>
