@@ -1,13 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
+import Image from 'next/image';
 
-import { Card } from '@/components/Card'
-import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import { Card } from '@/components/Card';
+import { SimpleLayout } from '@/components/SimpleLayout';
+import logoAnimaginary from '@/images/logos/animaginary.svg';
+import logoCosmos from '@/images/logos/cosmos.svg';
+import logoHelioStream from '@/images/logos/helio-stream.svg';
+import logoOpenShuttle from '@/images/logos/open-shuttle.svg';
+import logoPlanetaria from '@/images/logos/planetaria.svg';
 
 const projects = [
   {
@@ -45,7 +45,7 @@ const projects = [
     link: { href: '#', label: 'github.com' },
     logo: logoOpenShuttle,
   },
-]
+];
 
 function LinkIcon(props) {
   return (
@@ -55,7 +55,7 @@ function LinkIcon(props) {
         fill="currentColor"
       />
     </svg>
-  )
+  );
 }
 
 export default function Projects() {
@@ -65,12 +65,12 @@ export default function Projects() {
         <title>Projects - Spencer Sharp</title>
         <meta
           name="description"
-          content="Things I&apos;ve made trying to put a dent in my universe."
+          content="Things I've made trying to put a dent in my universe."
         />
       </Head>
       <SimpleLayout
         label="My projects"
-        title="Things I&apos;ve made trying to put a dent in my universe."
+        title="Things I've made trying to put a dent in my universe."
         intro="I have found that my work gives me meaning and while I have worked on quite the number of projects, here are the ones I am most proud of. For me, building products and services that people genuinely enjoy is the most rewarding thing I can do."
       >
         <ul
@@ -100,5 +100,5 @@ export default function Projects() {
         </ul>
       </SimpleLayout>
     </>
-  )
+  );
 }

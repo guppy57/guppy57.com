@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { Container } from '@/components/Container'
+import { Container } from '@/components/Container';
 
 function NavLink({ href, children }) {
   return (
@@ -10,7 +10,7 @@ function NavLink({ href, children }) {
     >
       {children}
     </Link>
-  )
+  );
 }
 
 export function Footer() {
@@ -26,9 +26,8 @@ export function Footer() {
                 <NavLink href="/uses">Uses</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-              &copy; {new Date().getFullYear()} Armaan Gupta. All rights
-                reserved. | {" "}
-                Website design with &hearts; by{' '}
+                &copy; {new Date().getFullYear()} Armaan Gupta. All rights
+                reserved. | Website design with &hearts; by{' '}
                 <a
                   href="https://kreativedreamflow.com"
                   className="transition hover:text-purple-600 dark:hover:text-purple-300"
@@ -41,5 +40,5 @@ export function Footer() {
         </div>
       </Container.Outer>
     </footer>
-  )
+  );
 }

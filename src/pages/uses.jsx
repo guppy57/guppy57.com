@@ -1,8 +1,8 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import { Card } from '@/components/Card'
-import { Section } from '@/components/Section'
-import { SimpleLayout } from '@/components/SimpleLayout'
+import { Card } from '@/components/Card';
+import { Section } from '@/components/Section';
+import { SimpleLayout } from '@/components/SimpleLayout';
 
 function ToolsSection({ children, ...props }) {
   return (
@@ -11,7 +11,7 @@ function ToolsSection({ children, ...props }) {
         {children}
       </ul>
     </Section>
-  )
+  );
 }
 
 function Tool({ title, href, children }) {
@@ -22,7 +22,7 @@ function Tool({ title, href, children }) {
       </Card.Title>
       <Card.Description>{children}</Card.Description>
     </Card>
-  )
+  );
 }
 
 export default function Uses() {
@@ -116,5 +116,5 @@ export default function Uses() {
         </div>
       </SimpleLayout>
     </>
-  )
+  );
 }

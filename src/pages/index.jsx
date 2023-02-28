@@ -1,29 +1,29 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import clsx from 'clsx'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import clsx from 'clsx';
 
-import { Button } from '@/components/Button'
-import { Card } from '@/components/Card'
-import { Container } from '@/components/Container'
+import { Button } from '@/components/Button';
+import { Card } from '@/components/Card';
+import { Container } from '@/components/Container';
 import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
   TwitterIcon,
-} from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
-import { formatDate } from '@/lib/formatDate'
-import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
+} from '@/components/SocialIcons';
+import logoAirbnb from '@/images/logos/airbnb.svg';
+import logoFacebook from '@/images/logos/facebook.svg';
+import logoPlanetaria from '@/images/logos/planetaria.svg';
+import logoStarbucks from '@/images/logos/starbucks.svg';
+import image1 from '@/images/photos/image-1.jpg';
+import image2 from '@/images/photos/image-2.jpg';
+import image3 from '@/images/photos/image-3.jpg';
+import image4 from '@/images/photos/image-4.jpg';
+import image5 from '@/images/photos/image-5.jpg';
+import { formatDate } from '@/lib/formatDate';
+import { generateRssFeed } from '@/lib/generateRssFeed';
+import { getAllArticles } from '@/lib/getAllArticles';
 
 function MailIcon(props) {
   return (
@@ -45,7 +45,7 @@ function MailIcon(props) {
         className="stroke-zinc-400 dark:stroke-zinc-500"
       />
     </svg>
-  )
+  );
 }
 
 function BriefcaseIcon(props) {
@@ -68,7 +68,7 @@ function BriefcaseIcon(props) {
         className="stroke-zinc-400 dark:stroke-zinc-500"
       />
     </svg>
-  )
+  );
 }
 
 function ArrowDownIcon(props) {
@@ -81,7 +81,7 @@ function ArrowDownIcon(props) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 function Article({ article }) {
@@ -96,7 +96,7 @@ function Article({ article }) {
       <Card.Description>{article.description}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
-  )
+  );
 }
 
 function SocialLink({ icon: Icon, ...props }) {
@@ -104,7 +104,7 @@ function SocialLink({ icon: Icon, ...props }) {
     <Link className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
-  )
+  );
 }
 
 function Newsletter() {
@@ -133,7 +133,7 @@ function Newsletter() {
         </Button>
       </div>
     </form>
-  )
+  );
 }
 
 function Resume() {
@@ -169,7 +169,7 @@ function Resume() {
       start: '2008',
       end: '2011',
     },
-  ]
+  ];
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
@@ -216,11 +216,17 @@ function Resume() {
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
-  )
+  );
 }
 
 function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  let rotations = [
+    'rotate-2',
+    '-rotate-2',
+    'rotate-2',
+    'rotate-2',
+    '-rotate-2',
+  ];
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -243,7 +249,7 @@ function Photos() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default function Home({ articles }) {
@@ -296,9 +302,7 @@ export default function Home({ articles }) {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            hello
-          </div>
+          <div className="flex flex-col gap-16">hello</div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
             <Resume />
@@ -306,12 +310,12 @@ export default function Home({ articles }) {
         </div>
       </Container>
     </>
-  )
+  );
 }
 
 export async function getStaticProps() {
   if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
+    await generateRssFeed();
   }
 
   return {
@@ -320,5 +324,5 @@ export async function getStaticProps() {
         .slice(0, 4)
         .map(({ component, ...meta }) => meta),
     },
-  }
+  };
 }
