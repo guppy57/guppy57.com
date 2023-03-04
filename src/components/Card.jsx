@@ -56,11 +56,27 @@ Card.Cta = function CardCta({ children }) {
   return (
     <div
       aria-hidden="true"
-      className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
+      className="relative z-10 mt-4 flex items-center text-sm font-medium text-purple-500"
     >
       {children}
       <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
     </div>
+  );
+};
+
+Card.Skills = function CardSkills({ children }) {
+  return (
+    <div className="relative z-10 mt-4 flex flex-wrap gap-2">
+      {children}
+    </div>
+  );
+};
+
+Card.Skill = function CardSkill({ children }) {
+  return (
+    <span className="px-2 py-1 text-xs font-medium text-zinc-800 bg-zinc-100 rounded-md dark:text-zinc-100 dark:bg-zinc-800">
+      {children}
+    </span>
   );
 };
 
