@@ -26,7 +26,7 @@ export function Footer() {
                 <NavLink href="/projects">Projects</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
               </div>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500">
+              <p className="text-sm text-zinc-400 dark:text-zinc-500 text-center sm:text-left">
                 &copy; {new Date().getFullYear()} Armaan Gupta. All rights
                 reserved. | Website design with &hearts; by{' '}
                 <a
