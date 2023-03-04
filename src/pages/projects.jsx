@@ -3,47 +3,43 @@ import Image from 'next/image';
 
 import { Card } from '@/components/Card';
 import { SimpleLayout } from '@/components/SimpleLayout';
-import logoAnimaginary from '@/images/logos/animaginary.svg';
-import logoCosmos from '@/images/logos/cosmos.svg';
-import logoHelioStream from '@/images/logos/helio-stream.svg';
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg';
-import logoPlanetaria from '@/images/logos/planetaria.svg';
+import logoPokedex from '@/images/logos/pokedex.png';
+import logoKreativeID from '@/images/logos/id.png';
+import logoKreativeHyperlink from '@/images/logos/hyperlink.png';
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Kreative ID',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Cross-service identity authentication and authorization service for Kreative.',
+    link: {
+      href: 'https://github.com/kreative/id-api',
+      label: 'github.com',
+    },
+    logo: logoKreativeID,
+    skills: ['TypeScript', 'Nest.js', 'React', 'SQL'],
   },
   {
-    name: 'Animaginary',
+    name: 'Kreative Hyperlink',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'Blazing-fast and free URL shorterner with analytics, leaderboards, and more.',
+    link: {
+      href: 'https://kreativehyperlink.com',
+      label: 'kreativehyperlink.com',
+    },
+    logo: logoKreativeHyperlink,
+    skills: ['Nest.js', 'TypeScript', 'React', 'Next,js'],
   },
   {
-    name: 'HelioStream',
+    name: "Armaan's Pokedex",
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'A simple Pokedex app built with Next.js and PokeAPI, just for fun.',
+    link: {
+      href: 'https://pokedex.kreativeusa.com',
+      label: 'pokedex.kreativeusa.com',
+    },
+    logo: logoPokedex,
+    skills: ['TypeScript', 'Next.js', 'PostgreSQL'],
   },
 ];
 
@@ -65,12 +61,12 @@ export default function Projects() {
         <title>Projects - Armaan Gupta</title>
         <meta
           name="description"
-          content="Things I've made trying to put a dent in my universe."
+          content="Things I've made trying to put a scratch in the universe."
         />
       </Head>
       <SimpleLayout
         label="My projects"
-        title="Things I've made trying to put a dent in my universe."
+        title="Things I've made trying to put a scratch in the universe."
         intro="I have found that my work gives me meaning and while I have worked on quite the number of projects, here are the ones I am most proud of. For me, building products and services that people genuinely enjoy is the most rewarding thing I can do."
       >
         <ul
@@ -83,7 +79,7 @@ export default function Projects() {
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8"
+                  className="h-full w-full rounded-full"
                   unoptimized
                 />
               </div>
@@ -91,7 +87,12 @@ export default function Projects() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+              <Card.Skills>
+                {project.skills.map((skill) => (
+                  <Card.Skill key={skill}>{skill}</Card.Skill>
+                ))}
+              </Card.Skills>
+              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-purple-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>
               </p>
