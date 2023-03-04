@@ -101,7 +101,7 @@ export default function About() {
               </p>
               <p>
                 Life&apos;s good and I&apos;m excited to continue to build
-                beautiful and useful things for humans.
+                useful and beautiful things for humans.
               </p>
             </div>
           </div>
