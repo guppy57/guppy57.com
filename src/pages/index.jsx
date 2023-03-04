@@ -15,11 +15,11 @@ import logoAirbnb from '@/images/logos/airbnb.svg';
 import logoFacebook from '@/images/logos/facebook.svg';
 import logoPlanetaria from '@/images/logos/planetaria.svg';
 import logoStarbucks from '@/images/logos/starbucks.svg';
-import image1 from '@/images/photos/image-1.jpg';
-import image2 from '@/images/photos/image-2.jpg';
-import image3 from '@/images/photos/image-3.jpg';
-import image4 from '@/images/photos/image-4.jpg';
-import image5 from '@/images/photos/image-5.jpg';
+import image1 from '@/images/guppyPhotos/image1.jpg';
+import image2 from '@/images/guppyPhotos/image2.jpg';
+import image3 from '@/images/guppyPhotos/image3.jpg';
+import image4 from '@/images/guppyPhotos/image4.jpg';
+import image5 from '@/images/guppyPhotos/image5.jpg';
 import { formatDate } from '@/lib/formatDate';
 import { generateRssFeed } from '@/lib/generateRssFeed';
 import { getAllArticles } from '@/lib/getAllArticles';
@@ -211,7 +211,7 @@ function Resume() {
         ))}
       </ol>
       <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
+        Download Resume
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
@@ -230,7 +230,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image1, image4, image2, image3, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -256,11 +256,11 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Spencer Sharp - Software designer, founder, and amateur astronaut
+          Armaan Gupta - Software engineer and designer to aid the human condition.
         </title>
         <meta
           name="description"
-          content="I&apos;m Armaan, a software engineer, designer and entrepreneur based in Ames, Iowa."
+          content="I'm Armaan, a software engineer, designer and entrepreneur based in Ames, Iowa."
         />
       </Head>
       <Container className="mt-9">
@@ -299,9 +299,30 @@ export default function Home({ articles }) {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">hello</div>
+          <div className="flex flex-col gap-4">
+            <h2 className="text-2xl font-bold dark:text-white">
+              Hello, I&apos;m Guppy 👋
+            </h2>
+            <p className="dark:text-white">
+              As a current student at Iowa State University studying Management
+              Information Systems, I don&apos;t get out too much, so I used my
+              nifty programming skills to build this website so you can get to
+              know me a little better.
+            </p>
+            <p className="pb-2 dark:text-white">
+              When I'm not in class or crying about some test, I'm probably
+              working on my company, Kreative, where I&apos;m designing or
+              developing something I find interesting. Or, I&apos;m fixing bugs
+              at John Deere as a student software engineer.
+            </p>
+            <Link
+              href="/about"
+              className="text-left dark:text-purple-300 dark:hover:text-purple-400"
+            >
+              Read the full story &rarr;
+            </Link>
+          </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
             <Resume />
           </div>
         </div>
