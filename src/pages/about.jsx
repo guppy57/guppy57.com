@@ -9,16 +9,17 @@ import {
   InstagramIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons';
-import portraitImage from '@/images/portrait.jpg';
+import portraitImage from '@/images/candidGuppy.jpeg';
+
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-purple-500 dark:text-zinc-200 dark:hover:text-purple-300"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-purple-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -60,46 +61,71 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I&apos;m Armaan Gupta. I live in Ames, IA, where I build beautiful software for humans.
+              I&apos;m Armaan Gupta. I live in Ames, IA, where I build beautiful
+              software for humans.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+                I&apos;ve been an entreprenuer since I was in elementary school
+                when I started selling pens and pencils to fellow students. In
+                middle school, I pivoted to selling second hand iPhones to kids
+                who got theirs taken away. After that, I discovered how to make
+                music with a Digital Audio Workstation (DAW) and started selling
+                beats online. After that, I opened a failed gaming studio with a
+                friend from my boy scout troop and a game developer in Romania I
+                met on Reddit.
               </p>
               <p>
-                The only thing I loved more than computers as a kid was space.
-                When I was 8, I climbed the 40-foot oak tree at the back of our
-                yard while wearing my older sister’s motorcycle helmet, counted
-                down from three, and jumped — hoping the tree was tall enough
-                that with just a bit of momentum I’d be able to get to orbit.
+                Yet, near the end of high school, I found a bit of my stride:
+                hackathons. After attending one on my own, I fell in love with
+                the environment and connecting with fellow makers. So I decided
+                to get into the hackathon business.
               </p>
               <p>
-                I spent the next few summers indoors working on a rocket design,
-                while I recovered from the multiple surgeries it took to fix my
-                badly broken legs. It took nine iterations, but when I was 15 I
-                sent my dad’s Blackberry into orbit and was able to transmit a
-                photo back down to our family computer from space.
+                In 2019, I ran my first event, BuildChicago, bringing together
+                75 students from across the Chicagoland area. After that ended,
+                I consulted on a few more hackathons and started working on four
+                more across the nation. My business, Kreative, and the hackathon
+                management subsidiary, Kreative Horizon, was going to bring over
+                500 students together.
               </p>
               <p>
-                Today, I’m the founder of Planetaria, where we’re working on
-                civilian space suits and manned shuttle kits you can assemble at
-                home so that the next generation of kids really <em>can</em>{' '}
-                make it to orbit — from the comfort of their own backyards.
+                Then COVID-19 came knocking. I had to shut down all of my events
+                and pivotted to building beautiful websites for small businesses
+                with my business Kreative Dreamflow. Today, I student Management
+                Information Systems at Iowa State University (graduating in
+                2024). In addition, I continue to run Kreative Dreamflow and am
+                launching new hackathons in the greater Des Moines area. Plus, I
+                work as a Software Engineer at John Deere with fellow ISU and
+                UIUC students.
+              </p>
+              <p>
+                Life&apos;s good and I&apos;m excited to continue to build
+                beautiful and useful things for humans.
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="https://instagram.com/armaangupta57" icon={InstagramIcon} className="mt-4">
+              <SocialLink
+                href="https://instagram.com/armaangupta57"
+                icon={InstagramIcon}
+                className="mt-4"
+              >
                 Follow on Instagram
               </SocialLink>
-              <SocialLink href="https://github.com/guppy57" icon={GitHubIcon} className="mt-4">
+              <SocialLink
+                href="https://github.com/guppy57"
+                icon={GitHubIcon}
+                className="mt-4"
+              >
                 Follow on GitHub
               </SocialLink>
-              <SocialLink href="https://linkedin.com/in/armaangupta57" icon={LinkedInIcon} className="mt-4">
+              <SocialLink
+                href="https://linkedin.com/in/armaangupta57"
+                icon={LinkedInIcon}
+                className="mt-4"
+              >
                 Follow on LinkedIn
               </SocialLink>
               <SocialLink
