@@ -1,10 +1,9 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
-import { 
-  ArrowTopRightOnSquareIcon
-} from '@heroicons/react/24/outline';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
@@ -14,6 +13,7 @@ import {
   InstagramIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons';
+import { LinkIcon } from '@/components/LinkIcon';
 import logoTpusa from '@/images/logos/tpusa.jpeg';
 import logoDreamflow from '@/images/logos/dreamflow.png';
 import logoJohnDeere from '@/images/logos/john-deere.png';
@@ -27,6 +27,8 @@ import image5 from '@/images/guppyPhotos/image5.jpg';
 import { formatDate } from '@/lib/formatDate';
 import { generateRssFeed } from '@/lib/generateRssFeed';
 import { getAllArticles } from '@/lib/getAllArticles';
+import projects from '@/lib/projects';
+import { useEffect } from 'react';
 
 function MailIcon(props) {
   return (
@@ -142,7 +144,7 @@ function Resume() {
       company: 'CyStarters',
       title: 'Cohort Member',
       logo: logoIsu,
-      start: "Aug 2021",
+      start: 'Aug 2021',
       end: 'May 2022',
     },
     {
@@ -172,7 +174,7 @@ function Resume() {
       logo: logoKreative,
       start: 'June 2018',
       end: 'Present',
-    }
+    },
   ];
 
   return (
@@ -185,7 +187,12 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-full w-full rounded-full" unoptimized />
+              <Image
+                src={role.logo}
+                alt=""
+                className="h-full w-full rounded-full"
+                unoptimized
+              />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -215,10 +222,10 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button 
+      <Button
         href="https://drive.google.com/file/d/1qltXlWbZEmWRnwh8QdYImB6RuwlgjESw/view"
         target="_blank"
-        variant="secondary" 
+        variant="secondary"
         className="group mt-6 w-full"
       >
         Download Resume
@@ -262,11 +269,18 @@ function Photos() {
 }
 
 export default function Home({ articles }) {
+  const [featuredProjects, setFeaturedProjects] = useState([]);
+
+  useEffect(() => {
+    setFeaturedProjects(projects.filter((project) => project.featured));
+  }, [projects]);
+
   return (
     <>
       <Head>
         <title>
-          Armaan Gupta - Software engineer and designer to aid the human condition.
+          Armaan Gupta - Software engineer and designer to aid the human
+          condition.
         </title>
         <meta
           name="description"
@@ -327,10 +341,44 @@ export default function Home({ articles }) {
             </p>
             <Link
               href="/about"
-              className="text-left dark:text-purple-300 dark:hover:text-purple-400"
+              className="text-left text-purple-500 hover:text-purple-700 dark:text-purple-300 dark:hover:text-purple-400"
             >
               Read the full story &rarr;
             </Link>
+            <h2 className="pt-6 text-2xl font-bold dark:text-white">
+              Featured projects
+            </h2>
+            <div className="mt-6">
+              <ul className="grid grid-cols-1 gap-x-12 gap-y-16" role="list">
+                {featuredProjects.map((project) => (
+                  <Card as="li" key={project.name}>
+                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                      <Image
+                        src={project.logo}
+                        alt=""
+                        className="h-full w-full rounded-full"
+                        unoptimized
+                      />
+                    </div>
+                    <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                      <Card.Link href={project.link.href}>
+                        {project.name}
+                      </Card.Link>
+                    </h2>
+                    <Card.Description>{project.description}</Card.Description>
+                    <Card.Skills>
+                      {project.skills.map((skill) => (
+                        <Card.Skill key={skill}>{skill}</Card.Skill>
+                      ))}
+                    </Card.Skills>
+                    <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-purple-500 dark:text-zinc-200">
+                      <LinkIcon className="h-6 w-6 flex-none" />
+                      <span className="ml-2">{project.link.label}</span>
+                    </p>
+                  </Card>
+                ))}
+              </ul>
+            </div>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
