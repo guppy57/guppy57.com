@@ -2,6 +2,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { 
+  ArrowTopRightOnSquareIcon
+} from '@heroicons/react/24/outline';
 
 import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
@@ -11,10 +14,11 @@ import {
   InstagramIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons';
-import logoAirbnb from '@/images/logos/airbnb.svg';
-import logoFacebook from '@/images/logos/facebook.svg';
-import logoPlanetaria from '@/images/logos/planetaria.svg';
-import logoStarbucks from '@/images/logos/starbucks.svg';
+import logoTpusa from '@/images/logos/tpusa.jpeg';
+import logoDreamflow from '@/images/logos/dreamflow.png';
+import logoJohnDeere from '@/images/logos/john-deere.png';
+import logoKreative from '@/images/logos/kreative.png';
+import logoIsu from '@/images/logos/isu.jpeg';
 import image1 from '@/images/guppyPhotos/image1.jpg';
 import image2 from '@/images/guppyPhotos/image2.jpg';
 import image3 from '@/images/guppyPhotos/image3.jpg';
@@ -65,19 +69,6 @@ function BriefcaseIcon(props) {
       <path
         d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
         className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  );
-}
-
-function ArrowDownIcon(props) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
       />
     </svg>
   );
@@ -138,36 +129,50 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'John Deere',
+      title: 'Software Engineer',
+      logo: logoJohnDeere,
+      start: 'Nov 2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: 'CyStarters',
+      title: 'Cohort Member',
+      logo: logoIsu,
+      start: "Aug 2021",
+      end: 'May 2022',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      company: 'Student Innovation Center',
+      title: 'Project Manager',
+      logo: logoIsu,
+      start: 'Oct 2021',
+      end: 'May 2022',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'President',
+      title: 'Turning Point USA',
+      logo: logoTpusa,
+      start: 'Aug 2021',
+      end: 'May 2022',
     },
+    {
+      company: 'Kreative Dreamflow',
+      title: 'Web Developer',
+      logo: logoDreamflow,
+      start: 'Sep 2020',
+      end: 'Present',
+    },
+    {
+      company: 'Kreative',
+      title: 'Founder & CEO',
+      logo: logoKreative,
+      start: 'June 2018',
+      end: 'Present',
+    }
   ];
 
   return (
@@ -180,7 +185,7 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+              <Image src={role.logo} alt="" className="h-full w-full rounded-full" unoptimized />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -210,9 +215,14 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button 
+        href="https://drive.google.com/file/d/1qltXlWbZEmWRnwh8QdYImB6RuwlgjESw/view"
+        target="_blank"
+        variant="secondary" 
+        className="group mt-6 w-full"
+      >
         Download Resume
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        <ArrowTopRightOnSquareIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
   );
