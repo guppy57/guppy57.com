@@ -13,12 +13,12 @@ export default function Projects() {
         <title>Projects - Armaan Gupta</title>
         <meta
           name="description"
-          content="Things I've made trying to put a scratch in the universe."
+          content="Things I've made trying to put a scratch on the universe."
         />
       </Head>
       <SimpleLayout
         label="My projects"
-        title="Things I've made trying to put a scratch in the universe."
+        title="Things I've made trying to put a scratch on the universe."
         intro="I have found that my work gives me meaning and while I have worked on quite the number of projects, here are the ones I am most proud of. For me, building products and services that people genuinely enjoy is the most rewarding thing I can do."
       >
         <ul
