@@ -298,8 +298,7 @@ export default function Home({ articles }) {
             Systems at Iowa State. When I&apos;m skipping class, it&apos;s
             usually to work on my company, Kreative, where I&apos;m hacking
             together products and services to make people&apos;s lives a tad bit
-            easier. Or, I&apos;m probably catching up on the latest TV show
-            I&apos;m binging.
+            easier.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
