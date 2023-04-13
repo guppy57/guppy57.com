@@ -1,7 +1,8 @@
 import logoPokedex from '@/images/logos/pokedex.png';
 import logoKreativeID from '@/images/logos/id.png';
 import logoKreativeHyperlink from '@/images/logos/hyperlink.png';
-import logoKTemplates from '@/images/ktemplates.png';
+import logoKTemplates from '@/images/logos/ktemplates.png';
+import logoKreativeHorizon from '@/images/logos/kreativehorizon.png';
 
 const projects = [
   {
@@ -26,7 +27,7 @@ const projects = [
     },
     logo: logoKreativeHyperlink,
     skills: ['Nest.js', 'TypeScript', 'React', 'Next,js'],
-    featured: true,
+    featured: false,
   },
   {
     name: "Armaan's Pokedex",
@@ -37,19 +38,29 @@ const projects = [
       label: 'pokedex.kreativeusa.com',
     },
     logo: logoPokedex,
-    skills: ['TypeScript',
-      'Next.js', 'PostgreSQL'],
+    skills: ['TypeScript', 'Next.js', 'PostgreSQL'],
     featured: false,
   },
   {
-    name: "Kreative Templates",
+    name: 'Kreative Templates',
     description: 'Peer to peer marketplace to share Obsidian templates.',
     link: {
       href: 'https://kreativetemplates.co',
       label: 'kreativetemplates.co',
     },
     logo: logoKTemplates,
-    skills: ['TypeScript', 'Next.js', 'Nest.js', 'PostgreSQL'],
+    skills: ['Next.js', 'Nest.js', 'PostgreSQL'],
+    featured: true,
+  },
+  {
+    name: 'HackIowaState v1',
+    description: '24-hour hackathon for the brightest students at Iowa State.',
+    link: {
+      href: 'https://kreativehorizon.com/hackisu',
+      label: 'kreativehorizon.com/hackisu',
+    },
+    logo: logoKreativeHorizon,
+    skills: ['Events', 'Sales', 'Graphic Design'],
     featured: true,
   },
 ];
