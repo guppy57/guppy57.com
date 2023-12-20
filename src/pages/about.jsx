@@ -44,7 +44,7 @@ export default function About() {
         <title>About - Armaan Gupta</title>
         <meta
           name="description"
-          content="I'm Armaan Gupta. I live in Ames, IA, where I build beautiful software for humans."
+          content="I'm Armaan Gupta. I live in Ames, IA, where I build beautiful products for humans."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -62,12 +62,12 @@ export default function About() {
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               I&apos;m Armaan Gupta. I live in Ames, IA, where I build beautiful
-              software for humans.
+              products for humans.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
                 I&apos;ve been an entreprenuer since I was in elementary school
-                when I started selling pens and pencils to fellow students. In
+                when I started trading pens and pencils to fellow students. In
                 middle school, I pivoted to selling second hand iPhones to kids
                 who got theirs taken away. After that, I discovered how to make
                 music with a Digital Audio Workstation (DAW) and started selling
@@ -131,7 +131,7 @@ export default function About() {
               <SocialLink
                 href="mailto:armaan@guppy.im"
                 icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+                className="mt-4 border-t border-zinc-100 dark:border-zinc-700/40"
               >
                 armaan@guppy.im
               </SocialLink>

@@ -18,6 +18,8 @@ import logoTpusa from '@/images/logos/tpusa.jpeg';
 import logoDreamflow from '@/images/logos/dreamflow.png';
 import logoJohnDeere from '@/images/logos/john-deere.png';
 import logoKreative from '@/images/logos/kreative.png';
+import logoHorizon from '@/images/logos/kreativehorizon.png';
+import logoDocuVet from '@/images/logos/kreativedocuvet.png';
 import logoIsu from '@/images/logos/isu.jpeg';
 import image1 from '@/images/guppyPhotos/image1.jpg';
 import image2 from '@/images/guppyPhotos/image2.jpg';
@@ -102,7 +104,7 @@ function SocialLink({ icon: Icon, ...props }) {
 function Newsletter() {
   return (
     <form
-      action="/thank-you"
+      action="/contact.jsx"
       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -130,6 +132,16 @@ function Newsletter() {
 
 function Resume() {
   let resume = [
+    {
+      company: 'Kreative DocuVet',
+      title: 'Founder & CEO',
+      logo: logoDocuVet,
+      start: 'Oct 2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
     {
       company: 'John Deere',
       title: 'Software Engineer',
@@ -166,6 +178,13 @@ function Resume() {
       title: 'Web Developer',
       logo: logoDreamflow,
       start: 'Sep 2020',
+      end: 'Feb 2023',
+    },
+    {
+      company: 'Kreative Horizon',
+      title: 'Organizer',
+      logo: logoHorizon,
+      start: 'Aug 2019',
       end: 'Present',
     },
     {
@@ -279,7 +298,7 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Armaan Gupta - Software engineer and designer to aid the human
+          Armaan Gupta - Builder and designer to aid the human
           condition.
         </title>
         <meta
@@ -290,7 +309,7 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software engineer and designer to aid the human condition.
+            Builder and designer to aid the human condition.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I’m Armaan, a software engineer, designer and entrepreneur based in
