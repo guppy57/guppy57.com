@@ -3,8 +3,44 @@ import logoKreativeID from '@/images/logos/id.png';
 import logoKreativeHyperlink from '@/images/logos/hyperlink.png';
 import logoKTemplates from '@/images/logos/ktemplates.png';
 import logoKreativeHorizon from '@/images/logos/kreativehorizon.png';
+import logoDocuvet from '@/images/logos/kreativedocuvet.png';
 
 const projects = [
+  {
+    name: 'Kreative DocuVet',
+    description: 'AI powered scribe for the everyday veterinarian',
+    link: {
+      href: 'https://kreativedocuvet.com',
+      label: 'kreativedocuvet.com',
+    },
+    logo: logoDocuvet,
+    skills: ['AI', 'Marketing', 'Next.js'],
+    featured: true,
+  },
+  {
+    name: 'DataISU v1',
+    description:
+      'First 24-hour datathon at Iowa State for 40 students',
+    link: {
+      href: 'https://kreativehorizon.com/events/dataisu-v1',
+      label: 'kreativehorizon.com/events/dataisu-v1',
+    },
+    logo: logoKreativeHorizon,
+    skills: ['Events', 'Data', 'Marketing'],
+    featured: true,
+  },
+  {
+    name: 'HackIowaState v2',
+    description:
+      '24-hour hackathon for 140 students at Iowa State from 6 schools.',
+    link: {
+      href: 'https://kreativehorizon.com/events/hackisu-v2',
+      label: 'kreativehorizon.com/events/hackisu-v2',
+    },
+    logo: logoKreativeHorizon,
+    skills: ['Event Management', 'Marketing'],
+    featured: true,
+  },
   {
     name: 'Kreative ID',
     description:
@@ -15,6 +51,17 @@ const projects = [
     },
     logo: logoKreativeID,
     skills: ['TypeScript', 'Nest.js', 'React', 'SQL'],
+    featured: false,
+  },
+  {
+    name: 'kreativehorizon.com',
+    description: 'Next.js and Sanity website for Kreative Horizon with built-in events manager.',
+    link: {
+      href: 'https://github.com/kreative/kreativehorizon.com',
+      label: 'github.com',
+    },
+    logo: logoKreativeHorizon,
+    skills: ['Next.js', 'Sanity', 'Tailwind CSS'],
     featured: false,
   },
   {
@@ -54,10 +101,10 @@ const projects = [
   },
   {
     name: 'HackIowaState v1',
-    description: '24-hour hackathon for the brightest students at Iowa State.',
+    description: '24-hour hackathon for 50+ students at Iowa State.',
     link: {
-      href: 'https://kreativehorizon.com/hackisu',
-      label: 'kreativehorizon.com/hackisu',
+      href: 'https://kreativehorizon.com/events/hackisu-v1',
+      label: 'kreativehorizon.com/events/hackisu-v1',
     },
     logo: logoKreativeHorizon,
     skills: ['Events', 'Sales', 'Graphic Design'],
