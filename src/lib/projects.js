@@ -8,13 +8,25 @@ import logoDocuvet from '@/images/logos/kreativedocuvet.png';
 const projects = [
   {
     name: 'Kreative DocuVet',
-    description: 'AI powered scribe for the everyday veterinarian',
+    description: 'AI powered scribe for the everyday veterinarian to elimnate the need to write medical records',
     link: {
       href: 'https://kreativedocuvet.com',
       label: 'kreativedocuvet.com',
     },
     logo: logoDocuvet,
     skills: ['AI', 'Marketing', 'Next.js'],
+    featured: true,
+  },
+  {
+    name: 'BuildDSM v1',
+    description:
+      'First 24-hour hackathon for over 50 students in Des Moines, IA',
+    link: {
+      href: 'https://kreativehorizon.com/events/builddsm-v1',
+      label: 'kreativehorizon.com/events/builddsm-v1',
+    },
+    logo: logoKreativeHorizon,
+    skills: ['Events', 'Data', 'Marketing'],
     featured: true,
   },
   {
@@ -27,7 +39,7 @@ const projects = [
     },
     logo: logoKreativeHorizon,
     skills: ['Events', 'Data', 'Marketing'],
-    featured: true,
+    featured: false,
   },
   {
     name: 'HackIowaState v2',
